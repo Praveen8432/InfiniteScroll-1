@@ -20,6 +20,9 @@ import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import java.com.github.pwittchen.infinitescroll.app.ResourceTable;
 
+/**
+ * MainAbilitySlice class to load main layout.
+ */
 public class MainAbilitySlice extends AbilitySlice {
 
     /**
