@@ -13,11 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package java.com.github.pwittchen.infinitescroll.app;
 
-import ohos.agp.components.*;
-import ohos.app.Context;
 import java.util.List;
+import ohos.agp.components.BaseItemProvider;
+import ohos.agp.components.Component;
+import ohos.agp.components.ComponentContainer;
+import ohos.agp.components.LayoutScatter;
+import ohos.agp.components.Text;
+import ohos.app.Context;
 
 /**
  * AdapterClass.
@@ -27,17 +32,12 @@ public class Adapter extends BaseItemProvider {
     /**
      * Context Object.
      */
-    private Context mContext;
+  private Context context;
 
     /**
      * List Object to hold ListItems.
      */
-    private List<String> items;
-
-    /**
-     * mIndex.
-     */
-    private int mIndex;
+  private List<String> items;
 
     /**
      * Adapter constructor.
@@ -45,11 +45,11 @@ public class Adapter extends BaseItemProvider {
      * @param context context
      * @param list    list
      */
-    public Adapter(Context context, List<String> list) {
-        super();
+  public Adapter(Context context, List<String> list) {
+    super();
 
-        mContext = context;
-        this.items = list;
+    this.context = context;
+    this.items = list;
     }
 
     /**
@@ -57,7 +57,7 @@ public class Adapter extends BaseItemProvider {
      *
      * @param list list
      */
-    public void addItems(List<String> list) {
+  public void addItems(List<String> list) {
         this.items = list;
     }
 
@@ -66,9 +66,9 @@ public class Adapter extends BaseItemProvider {
      *
      * @return List
      */
-    public List<String> getItems() {
-        return items;
-    }
+  public List<String> getItems() {
+    return items;
+   }
 
     /**
      * To get Items.
@@ -76,7 +76,7 @@ public class Adapter extends BaseItemProvider {
      * @param index index
      * @return Object
      */
-    @Override
+  @Override
     public Object getItem(int index) {
         return items.get(index);
     }
@@ -113,9 +113,8 @@ public class Adapter extends BaseItemProvider {
     @Override
     public Component getComponent(int index, Component component, ComponentContainer componentContainer) {
         Component view = component;
-        this.mIndex = index;
         if (view == null) {
-            ComponentContainer rootlayout = (ComponentContainer) LayoutScatter.getInstance(mContext).
+            ComponentContainer rootlayout = (ComponentContainer) LayoutScatter.getInstance(this.context).
                     parse(ResourceTable.Layout_row_item, null, false);
             Text rowText = (Text) rootlayout.findComponentById(ResourceTable.Id_row_text);
             rowText.setText(items.get(index));
