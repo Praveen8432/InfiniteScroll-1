@@ -1,0 +1,28 @@
+{
+  "app": {
+    "bundleName": "java.com.github.pwittchen.infinitescroll.app",
+    "vendor": "com",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    } ,
+    "apiVersion": {
+      "compatible": 5,
+      "target": 5,
+      "releaseType": "Beta1"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "java.com.github.pwittchen.infinitescroll.library",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "infinitescroll",
+      "moduleType": "har"
+    }
+  }
+}
