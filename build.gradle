@@ -41,11 +41,9 @@ allprojects {
     task checkstyle(type: Checkstyle) {
         showViolations = true
         configFile new File(rootDir, "config/checkstyle/checkstyle_8_43.xml")
-        source 'src'
+        source 'entry/src/main/java'
+        source 'infinitescroll/src/main/java'
         include '**/*.java'
-        exclude '**/gen/**'
-        exclude '**/R.java'
-        exclude '**/BuildConfig.java'
         classpath = files()
     }
 }
