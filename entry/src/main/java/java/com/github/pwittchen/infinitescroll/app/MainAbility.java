@@ -17,7 +17,9 @@ package java.com.github.pwittchen.infinitescroll.app;
 
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.*;
+import ohos.agp.components.Component;
+import ohos.agp.components.ListContainer;
+import ohos.agp.components.RoundProgressBar;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
 import java.com.github.pwittchen.infinitescroll.app.slice.MainAbilitySlice;
@@ -136,7 +138,8 @@ public class MainAbility extends Ability {
     private InfiniteScrollListener createInfiniteScrollListener() {
         LogUtil.info(LABEL, "createInfiniteScrollListener");
         return new InfiniteScrollListener(MAX_ITEMS_PER_REQUEST, list) {
-            @Override public void onScrolledToEnd(final int firstVisibleItemPosition) {
+            @Override
+            public void onScrolledToEnd(final int firstVisibleItemPosition) {
                 LogUtil.info(LABEL, "onScrolledToEnd");
                 simulateLoading();
                 int start = ++page * MAX_ITEMS_PER_REQUEST;
@@ -158,7 +161,7 @@ public class MainAbility extends Ability {
      * To get which Items to be loaded.
      *
      * @param start start
-     * @param end end
+     * @param end   end
      * @return List
      */
     private List<String> getItemsToBeLoaded(int start, int end) {

@@ -13,9 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package java.com.github.pwittchen.infinitescroll.app;
 
-import ohos.agp.components.*;
+import ohos.agp.components.BaseItemProvider;
+import ohos.agp.components.Component;
+import ohos.agp.components.ComponentContainer;
+import ohos.agp.components.LayoutScatter;
+import ohos.agp.components.Text;
 import ohos.app.Context;
 import java.util.List;
 
@@ -43,9 +48,9 @@ public class Adapter extends BaseItemProvider {
      * Adapter constructor.
      *
      * @param context context
-     * @param list list
+     * @param list    list
      */
-    public Adapter(Context context, List<String>  list) {
+    public Adapter(Context context, List<String> list) {
         super();
 
         mContext = context;
@@ -105,22 +110,22 @@ public class Adapter extends BaseItemProvider {
     /**
      * To get component.
      *
-     * @param index index
-     * @param component component
+     * @param index              index
+     * @param component          component
      * @param componentContainer componentContainer
      * @return Component
      */
     @Override
     public Component getComponent(int index, Component component, ComponentContainer componentContainer) {
-       Component view = component;
-       this.mIndex = index;
-       if (view == null) {
-           ComponentContainer rootlayout = (ComponentContainer) LayoutScatter.getInstance(mContext).
-                   parse(ResourceTable.Layout_row_item, null, false);
-           Text rowText = (Text) rootlayout.findComponentById(ResourceTable.Id_row_text);
-           rowText.setText(items.get(index));
-           view = rootlayout;
-       }
+        Component view = component;
+        this.mIndex = index;
+        if (view == null) {
+            ComponentContainer rootlayout = (ComponentContainer) LayoutScatter.getInstance(mContext).
+                    parse(ResourceTable.Layout_row_item, null, false);
+            Text rowText = (Text) rootlayout.findComponentById(ResourceTable.Id_row_text);
+            rowText.setText(items.get(index));
+            view = rootlayout;
+        }
         return view;
     }
 }

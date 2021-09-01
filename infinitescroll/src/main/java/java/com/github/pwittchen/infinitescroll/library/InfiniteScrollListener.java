@@ -29,7 +29,7 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
     /**
      * maxItemsPerRequest.
      */
-    private  int maxItemsPerRequest;
+    private int maxItemsPerRequest;
 
     /**
      * listView.
@@ -45,7 +45,7 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
      * InfiniteScrollListener.
      *
      * @param maxItemsPerRequest maxItemsPerRequest
-     * @param listView listView
+     * @param listView           listView
      */
     public InfiniteScrollListener(int maxItemsPerRequest, ListContainer listView) {
         this.maxItemsPerRequest = maxItemsPerRequest;
@@ -57,10 +57,10 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
      * onContentScrolled.
      *
      * @param component component
-     * @param i i
-     * @param i1 i1
-     * @param i2 i2
-     * @param i3 i3
+     * @param i         i
+     * @param i1        i1
+     * @param i2        i2
+     * @param i3        i3
      */
     @Override
     public void onContentScrolled(Component component, int i, int i1, int i2, int i3) {
@@ -78,7 +78,7 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
     protected boolean canLoadMoreItems() {
         final int visibleItemsCount = listView.getVisibleIndexCount();
         final int totalItemsCount = listView.getChildCount();
-        final int pastVisibleItemsCount =  listView.getFirstVisibleItemPosition();
+        final int pastVisibleItemsCount = listView.getFirstVisibleItemPosition();
         final boolean lastItemShown = visibleItemsCount + pastVisibleItemsCount >= totalItemsCount;
         LogUtil.info(LABEL, "visibleItemsCount" + visibleItemsCount + " \n totalItemsCount" + totalItemsCount + " \n pastVisibleItemsCount" + pastVisibleItemsCount);
         LogUtil.info(LABEL, "lastItemShown && totalItemsCount >= maxItemsPerRequest" + (lastItemShown && totalItemsCount >= maxItemsPerRequest));
@@ -88,8 +88,8 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
     /**
      * refreshView.
      *
-     * @param view view
-     * @param adapter adapter
+     * @param view     view
+     * @param adapter  adapter
      * @param position position
      */
     protected void refreshView(ListContainer view, BaseItemProvider adapter, int position) {

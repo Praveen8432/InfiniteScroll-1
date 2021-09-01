@@ -24,7 +24,7 @@ public class Preconditions {
     /**
      * checkNotNull.
      *
-     * @param object object
+     * @param object  object
      * @param message message
      */
     public static void checkNotNull(Object object, String message) {
@@ -36,7 +36,7 @@ public class Preconditions {
     /**
      * checkIfPositive.
      *
-     * @param number number
+     * @param number  number
      * @param message message
      */
     public static void checkIfPositive(int number, String message) {
