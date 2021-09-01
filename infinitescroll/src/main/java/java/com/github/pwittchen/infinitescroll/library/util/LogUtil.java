@@ -90,5 +90,4 @@ public class LogUtil {
     public static void error(String tag, String msg) {
         HiLog.error(LABEL_LOG, LOG_FORMAT, tag, msg);
     }
-
 }

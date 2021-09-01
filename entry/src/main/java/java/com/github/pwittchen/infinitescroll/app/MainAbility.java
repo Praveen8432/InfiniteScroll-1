@@ -13,13 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package java.com.github.pwittchen.infinitescroll.app;
 
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Component;
-import ohos.agp.components.ListContainer;
-import ohos.agp.components.RoundProgressBar;
+import ohos.agp.components.*;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
 import java.com.github.pwittchen.infinitescroll.app.slice.MainAbilitySlice;

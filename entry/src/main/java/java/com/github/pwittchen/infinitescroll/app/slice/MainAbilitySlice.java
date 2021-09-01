@@ -1,7 +1,6 @@
 package java.com.github.pwittchen.infinitescroll.app.slice;
 
 import java.com.github.pwittchen.infinitescroll.app.ResourceTable;
-
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 

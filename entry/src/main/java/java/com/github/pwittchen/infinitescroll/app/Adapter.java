@@ -13,14 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package java.com.github.pwittchen.infinitescroll.app;
 
-import ohos.agp.components.BaseItemProvider;
-import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
-import ohos.agp.components.LayoutScatter;
-import ohos.agp.components.Text;
+import ohos.agp.components.*;
 import ohos.app.Context;
 import java.util.List;
 
