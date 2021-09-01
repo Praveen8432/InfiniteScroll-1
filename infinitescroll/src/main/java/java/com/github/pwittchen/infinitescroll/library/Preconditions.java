@@ -22,6 +22,12 @@ package java.com.github.pwittchen.infinitescroll.library;
 public class Preconditions {
 
     /**
+     * private constructor.
+     */
+    private Preconditions() {
+    }
+
+    /**
      * checkNotNull.
      *
      * @param object  object

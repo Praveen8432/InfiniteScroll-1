@@ -47,7 +47,7 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
      * @param maxItemsPerRequest maxItemsPerRequest
      * @param listView           listView
      */
-    public InfiniteScrollListener(int maxItemsPerRequest, ListContainer listView) {
+    protected InfiniteScrollListener(int maxItemsPerRequest, ListContainer listView) {
         this.maxItemsPerRequest = maxItemsPerRequest;
         this.listView = listView;
         Preconditions.checkIfPositive(this.maxItemsPerRequest, "maxItemsPerRequest <= 0");
@@ -80,9 +80,7 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
         final int totalItemsCount = listView.getChildCount();
         final int pastVisibleItemsCount = listView.getFirstVisibleItemPosition();
         final boolean lastItemShown = visibleItemsCount + pastVisibleItemsCount >= totalItemsCount;
-        LogUtil.info(LABEL, "visibleItemsCount" + visibleItemsCount + " \n totalItemsCount" + totalItemsCount + " \n pastVisibleItemsCount" + pastVisibleItemsCount);
-        LogUtil.info(LABEL, "lastItemShown && totalItemsCount >= maxItemsPerRequest" + (lastItemShown && totalItemsCount >= maxItemsPerRequest));
-        return true;
+        return lastItemShown && totalItemsCount >= maxItemsPerRequest;
     }
 
     /**
