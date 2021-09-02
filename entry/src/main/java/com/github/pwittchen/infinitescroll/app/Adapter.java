@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package java.com.github.pwittchen.infinitescroll.app;
+package com.github.pwittchen.infinitescroll.app;
 
 import ohos.agp.components.BaseItemProvider;
 import ohos.agp.components.Component;

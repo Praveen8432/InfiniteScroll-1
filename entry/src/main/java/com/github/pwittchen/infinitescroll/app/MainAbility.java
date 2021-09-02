@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package java.com.github.pwittchen.infinitescroll.app;
+package com.github.pwittchen.infinitescroll.app;
 
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
@@ -23,9 +23,9 @@ import ohos.agp.components.ListContainer;
 import ohos.agp.components.RoundProgressBar;
 import ohos.eventhandler.EventHandler;
 import ohos.eventhandler.EventRunner;
-import java.com.github.pwittchen.infinitescroll.app.slice.MainAbilitySlice;
-import java.com.github.pwittchen.infinitescroll.library.InfiniteScrollListener;
-import java.com.github.pwittchen.infinitescroll.library.util.LogUtil;
+import com.github.pwittchen.infinitescroll.app.slice.MainAbilitySlice;
+import com.github.pwittchen.infinitescroll.library.InfiniteScrollListener;
+import com.github.pwittchen.infinitescroll.library.util.LogUtil;
 import java.util.LinkedList;
 import java.util.List;
 

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package java.com.github.pwittchen.infinitescroll.library;
+package com.github.pwittchen.infinitescroll.library;
 
 import ohos.agp.components.BaseItemProvider;
 import ohos.agp.components.Component;
 import ohos.agp.components.ListContainer;
-import java.com.github.pwittchen.infinitescroll.library.util.LogUtil;
+import com.github.pwittchen.infinitescroll.library.util.LogUtil;
 
 /**
  * InfiniteScrollListener.

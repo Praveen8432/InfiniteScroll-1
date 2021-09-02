@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package java.com.github.pwittchen.infinitescroll.library.util;
+package com.github.pwittchen.infinitescroll.library.util;
 
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;

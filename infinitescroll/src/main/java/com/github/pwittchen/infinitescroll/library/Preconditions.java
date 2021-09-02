@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package java.com.github.pwittchen.infinitescroll.library;
+package com.github.pwittchen.infinitescroll.library;
 
 /**
  * Preconditions.

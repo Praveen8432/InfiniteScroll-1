@@ -14,35 +14,19 @@
  * limitations under the License.
  */
 
-package java.com.github.pwittchen.infinitescroll.app.slice;
+package com.github.pwittchen.infinitescroll.app;
 
-import ohos.aafwk.ability.AbilitySlice;
-import ohos.aafwk.content.Intent;
-import java.com.github.pwittchen.infinitescroll.app.ResourceTable;
+import ohos.aafwk.ability.AbilityPackage;
 
 /**
- * MainAbilitySlice class to load main layout.
+ * Default myapplication class.
  */
-public class MainAbilitySlice extends AbilitySlice {
-
+public class MyApplication extends AbilityPackage {
     /**
-     * onStart.
-     *
-     * @param intent intent
+     * onInitialize.
      */
     @Override
-    public void onStart(Intent intent) {
-        super.onStart(intent);
-        super.setUIContent(ResourceTable.Layout_ability_main);
-    }
-
-    @Override
-    public void onActive() {
-        super.onActive();
-    }
-
-    @Override
-    public void onForeground(Intent intent) {
-        super.onForeground(intent);
+    public void onInitialize() {
+        super.onInitialize();
     }
 }

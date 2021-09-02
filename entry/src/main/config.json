@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "java.com.github.pwittchen.infinitescroll.app",
+    "bundleName": "com.github.pwittchen.infinitescroll.app",
     "vendor": "com",
     "version": {
       "code": 1000000,
@@ -9,9 +9,9 @@
   },
   "deviceConfig": {},
   "module": {
-    "package": "java.com.github.pwittchen.infinitescroll.app",
+    "package": "com.github.pwittchen.infinitescroll.app",
     "name": ".MyApplication",
-    "mainAbility": "java.com.github.pwittchen.infinitescroll.app.MainAbility",
+    "mainAbility": "com.github.pwittchen.infinitescroll.app.MainAbility",
     "deviceType": [
       "phone","tablet"
     ],
@@ -34,7 +34,7 @@
           }
         ],
         "orientation": "unspecified",
-        "name": "java.com.github.pwittchen.infinitescroll.app.MainAbility",
+        "name": "com.github.pwittchen.infinitescroll.app.MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:entry_MainAbility",
