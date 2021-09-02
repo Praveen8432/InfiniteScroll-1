@@ -62,7 +62,7 @@ public class MainAbility extends Ability {
     /**
      * ListContainer.
      */
-    private ListContainer list;
+    private ListContainer listContainer;
 
     /**
      * RoundedProgressBar.
@@ -116,7 +116,7 @@ public class MainAbility extends Ability {
      * IntiViews.
      */
     public void initViews() {
-        list = (ListContainer) findComponentById(ResourceTable.Id_list_view);
+        listContainer = (ListContainer) findComponentById(ResourceTable.Id_list_view);
         mProgressBar = (RoundProgressBar) findComponentById(ResourceTable.Id_progressBar);
         initListView();
 
@@ -127,8 +127,8 @@ public class MainAbility extends Ability {
      */
     private void initListView() {
         mAdapter = new Adapter(this, items.subList(page, MAX_ITEMS_PER_REQUEST));
-        list.setItemProvider(mAdapter);
-        list.setScrolledListener(createInfiniteScrollListener());
+        listContainer.setItemProvider(mAdapter);
+        listContainer.setScrolledListener(createInfiniteScrollListener());
     }
 
     /**
@@ -138,7 +138,7 @@ public class MainAbility extends Ability {
      */
     private InfiniteScrollListener createInfiniteScrollListener() {
         LogUtil.info(LABEL, "createInfiniteScrollListener");
-        return new InfiniteScrollListener(MAX_ITEMS_PER_REQUEST, list) {
+        return new InfiniteScrollListener(MAX_ITEMS_PER_REQUEST, listContainer) {
             @Override
             public void onScrolledToEnd(final int firstVisibleItemPosition) {
                 LogUtil.info(LABEL, "onScrolledToEnd");
@@ -152,7 +152,7 @@ public class MainAbility extends Ability {
                     int end = start + MAX_ITEMS_PER_REQUEST;
                     final List<String> itemsLocal = getItemsToBeLoaded(start, end);
                     mAdapter.addItems(itemsLocal);
-                    refreshView(list, mAdapter, firstVisibleItemPosition);
+                    refreshView(listContainer, mAdapter, firstVisibleItemPosition);
                 }
             }
         };
@@ -167,7 +167,7 @@ public class MainAbility extends Ability {
      */
     private List<String> getItemsToBeLoaded(int start, int end) {
         List<String> newItems = items.subList(start, end);
-        final List<String> oldItems = ((Adapter) list.getItemProvider()).getItems();
+        final List<String> oldItems = ((Adapter) listContainer.getItemProvider()).getItems();
         final List<String> itemsLocal = new LinkedList<>();
         itemsLocal.addAll(oldItems);
         itemsLocal.addAll(newItems);

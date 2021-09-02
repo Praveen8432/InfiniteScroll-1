@@ -34,11 +34,16 @@ import static org.junit.Assert.assertThrows;
  */
 public class ExampleOhosTest {
 
-    private String message = "maxitemsperrequest shouldn't be zero";
+    private String LABEL = "INFINITE_SCROLL";
     @Test
     public void testBundleName() {
         final String actualBundleName = AbilityDelegatorRegistry.getArguments().getTestBundleName();
         assertEquals("com.github.pwittchen.infinitescroll.app", actualBundleName);
+    }
+
+    @Test
+    public void testMaxItemsPerRequest(){
+        assertEquals(LABEL, MainAbility.LABEL);
     }
 
 }
