@@ -1,6 +1,6 @@
 # InfiniteScroll
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_SpannableTextView&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_SpannableTextView)
-[![Build](https://github.com/applibgroup/SpannableTextView/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/SpannableTextView/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_InfiniteScrollw&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_InfiniteScroll)
+[![Build](https://github.com/applibgroup/InfiniteScroll/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/InfiniteScroll/actions/workflows/main.yml)
  
 ## Introduction
  
@@ -12,8 +12,9 @@
 
 ## Screenshot
 
- ![Continuous, Discrete, Custom Java layout](Images/screenshot1.png) ![Continuous, Discrete, Custom Java layout](Images/screenshot2.png) ![Continuous, Discrete, Custom Java layout](Images/screenshot3.png)
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  ![Continuous, Discrete, Custom Java layout](images/screenshot1.png)
+  ![Continuous, Discrete, Custom Java layout](images/screenshot2.png)
+  ![Continuous, Discrete, Custom Java layout](images/screenshot3.png)
 
 ## Installation
 
