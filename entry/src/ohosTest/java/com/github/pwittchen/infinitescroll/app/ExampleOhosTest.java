@@ -27,14 +27,13 @@ import com.github.pwittchen.infinitescroll.library.InfiniteScrollListener;
 import com.github.pwittchen.infinitescroll.library.Preconditions;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
 
 /**
  * ExampleOhosTest.
  */
 public class ExampleOhosTest {
 
-    private String LABEL = "INFINITE_SCROLL";
+    private String label = "INFINITE_SCROLL";
     @Test
     public void testBundleName() {
         final String actualBundleName = AbilityDelegatorRegistry.getArguments().getTestBundleName();
@@ -43,7 +42,7 @@ public class ExampleOhosTest {
 
     @Test
     public void testMaxItemsPerRequest(){
-        assertEquals(LABEL, MainAbility.LABEL);
+        assertEquals(label, MainAbility.LABEL);
     }
 
 }
