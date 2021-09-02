@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+
+    <ListContainer
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:id="$+id:list_view"
+        ohos:align_parent_top="true"
+        ohos:layout_alignment="start|horizontal_center|vertical_center"
+
+        />
+    <Text
+        ohos:height="400vp"
+        ohos:width="match_parent"
+        ohos:id="$+id:selectText"
+        ohos:align_parent_top="true"
+        ohos:layout_alignment="start|horizontal_center|vertical_center"
+        ohos:text="Click"
+        ohos:text_size="80vp"
+        ohos:visibility="hide"
+        />
+    <RoundProgressBar
+        ohos:id="$+id:progressBar"
+        ohos:height="60vp"
+        ohos:width="60vp"
+        ohos:align_parent_bottom="true"
+        ohos:center_in_parent="true"
+        ohos:visibility="hide"
+        ohos:progress_width="6vp"
+        ohos:start_angle="20"
+        ohos:max_angle="270"
+        ohos:infinite="true"
+        ohos:progress_color="#FF04A1AE"
+        />
+
+
+
+</DependentLayout>
