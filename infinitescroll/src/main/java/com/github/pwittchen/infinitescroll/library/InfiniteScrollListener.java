@@ -50,6 +50,7 @@ public abstract class InfiniteScrollListener implements Component.ScrolledListen
     protected InfiniteScrollListener(int maxItemsPerRequest, ListContainer listView) {
         this.maxItemsPerRequest = maxItemsPerRequest;
         this.listView = listView;
+        Preconditions.checkNotNull(this.listView, "ListContainer null object passed");
         Preconditions.checkIfPositive(this.maxItemsPerRequest, "maxItemsPerRequest <= 0");
     }
 
