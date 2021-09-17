@@ -37,6 +37,13 @@ dependencies {
     testImplementation 'junit:junit:4.13'
 }
 ```
+3. For using InfiniteScroll from a remote repository in separate application, add the below dependencies in entry/build.gradle file.
+```
+dependencies {
+    implementation 'dev.applibgroup:infinitescroll:1.0.0'
+    testImplementation 'junit:junit:4.13'
+}
+```
 ​
 ## Usage
 
